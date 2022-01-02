@@ -81,7 +81,7 @@ export class ScriptLoaderService {
       const script = this.createGoogleChartsScript();
       script.onload = () => {
         this.zone.run(() => {
-          this.scriptLoadSubject.next();
+          this.scriptLoadSubject.next(null);
           this.scriptLoadSubject.complete();
         });
       };
